@@ -6,12 +6,12 @@
   If it is not, console log "Coding has its challenges."
 */
 
-let lovesCode = true
+const loveCode = true
 
-if(lovesCode === true){
-  console.log('I love to code!')
-} else {
-  console.log('Coding has its challenges.')
+if (loveCode === true){
+  console.log("I love to code!")
+} else{
+  console.log("Coding has its challenges.")
 }
 
 // For problems 2-3 use the following lines of code:
@@ -23,17 +23,26 @@ var brittanisBirthYear = 1986;
 ////////// PROBLEM 2 //////////
 
 /*
-  Using an if statement and a comparison operator, create code that will check if Amy or Brittani is older, and then console.log '{name} is older'. Hint: Consider what will happen if they are the same age. Handle this situation.
+  Using an if statement and a comparison operator, create code that will 
+  check if Amy or Brittani is older, and then console.log '{name} is older'. 
+  Hint: Consider what will happen if they are the same age. Handle this situation.
 */
 
-if (amysAge > brittanisAge) {
-  console.log('Amy is older than Brittani.')
-} else if (brittanisAge > amysAge) {
-  console.log('Brittani is older than Amy.')
-} else {
-  console.log('Amy and Brittani are the same age.')
-}
+// if (amysAge > brittanisAge){
+//   console.log('Amy is older.')
+// } else if (brittanisAge > amysAge){
+//   console.log('Brittani is older.')
+// } else if (brittanisAge === amysAge){
+//   console.log('Their ages are identical.')
+// }
 
+if (amysAge > brittanisAge){
+  console.log('Amy is older.')
+} else if (brittanisAge > amysAge){
+  console.log('Brittani is older.')
+} else {
+  console.log('Their ages are identical.')
+}
 
 
 ////////// PROBLEM 3 //////////
@@ -72,13 +81,16 @@ let rain = true;
   temperature parameters when it is not raining.
 */
 
-if (temp >= 80 && rain){
+if (temp >= 80 && raining){
   console.log('Wear a t-shirt and take an umbrella.')
-} else if (temp >= 60 && temp <= 80 && rain){
-  console.log('Wear a rain-jacket.')
-} else if (temp <= 60){
-  console.log('Wear a coat.')
-}
+  } else if (60 <= temp <= 80 && rain === true){
+    console.log('Wear a jacket and carry an umbrella.')
+  } else if(temp <= 60){
+    console.log('Wear a jacket and carry an umbrella.')
+  } else if(rain === false){
+    console.log('Wear sandals.')
+  }
+
 
 ////////// PROBLEM 5 //////////
 
@@ -87,7 +99,7 @@ if (temp >= 80 && rain){
   and on each iteration logs the word 'hello'.
 */
 
-for(i = 0; i < 10; i++){
+for (let i = 0; i < 10; i++){
   console.log('hello')
 }
 
@@ -112,15 +124,20 @@ for (let i = 1; i < 11; i++){
   on the second iteration it would log 9.
 */
 
-//          <-- i-- 
-// 0 1 2 3 4 5 6 7 8 9 10
-// 0 1 2 3 4 5 6 7 8 9 10
-// Note: i ++ --> causing infinite loop
+//set for loop
+//i = 10 because starting place is 10
+//condition is i > -1 to include 0
+//decrementor since loop is running backwards on integers
+//log i
 
+//                   <--- i--
+// -1 0 1 2 3 4 5 6 7 8 9 10   running backwards
+//  0 1 2 3 4 5 6 7 8 9 10 11  11 loops
 
-for (let i = 10; i >= 0; i--) {
+for (let i = 10; i > -1; i--){
   console.log(i)
 }
+
 
 ////////// PROBLEM 8 //////////
 
@@ -135,17 +152,12 @@ let passingScore = 7;
   If your code is successful, you will see your logged statement 7 times.
 */
 
-let x = 0
 
-while (x < passingScore){
-  console.log("Your score is not high enough")
-  x += 1 
-}
+while (score < passingScore){
+  console.log("Your score is not high enough.")
+  score += 1 //can also be written as score ++
+} 
 
-while (score < passingScore) {
-  console.log('Your score is not high enough')
-  score++
-}
 
 ////////// INTERMEDIATE PROBLEMS //////////
 
@@ -158,17 +170,20 @@ while (score < passingScore) {
 */
 
 let changeMyMind = true
+console.log(changeMyMind)
 
-if (changeMyMind === true){
-  changeMyMind = false
-  console.log(changeMyMind)
-} else (changeMyMind === true)
-
-if (changeMyMind) {
-  changeMyMind = false
-} else {
-  changeMyMind = true
+if (changeMyMind = true){
+  console.log(false)
+} else if (changeMyMind === false){
+  console.log(true)
 }
+
+// if (changeMyMind) {
+//   changeMyMind = false
+// } else {
+//   changeMyMind = true
+// }
+
 
 ////////// PROBLEM 10 //////////
 // Using the "not" operator (!), change the current value 
@@ -177,14 +192,15 @@ if (changeMyMind) {
 // After you change the value of changeMyMind, console.log 
 // it's new value (it should now read true).
 
-changeMyMind != false
+changeMyMind !== false
 console.log(changeMyMind)
+
+
 
 ////////// ADVANCED PROBLEMS //////////
 
 ////////// PROBLEM 11 //////////
 
-let z = 5;
 // Create a while loop that continues to run 
 // while z is greater than 0. Within the while loop, 
 // log a countdown from the value of z to 1. 
@@ -192,19 +208,24 @@ let z = 5;
 // z by 1. If your code is running properly, 
 // you should see: 5,4,3,2,1,4,3,2,1,3,2,1,2,1,1.
 
-// Set while loop . . . while (){}
-// (condition is z > 0)
-// in 'then' brackets {for loop: let i = z; i > 0; i-- / since z is focus value and use decrementor since countdown}
-//          <--
-// 1 2 3 4 5
-// 0 1 2 3 4  
-// log i
-// need z -- because infinite loop since i=z will always be greater than 0
+let z = 5
 
+// while(z > 0){
+//   console.log(z)
+//   z--
+// }
+// will only show 5 iterations: 5 through 1
 
-while (z > 0){
-  for (let i = z; i > 0; i--) {
-    console.log(i)
+//PSEUDOCODE
+// Set while loop to run when z > 0
+// Execute another loop based on the z loop by setting i = z; i > 0; i-- because want values to run backwards
+// log i to show loop in terminal
+// decrement z so it eventually hits 0
+// loop i will continue to run backwards until z hits 0 --> all conditions have failed
+
+while(z > 0){
+  for (let i = z; i > 0; i--){
+  console.log(i)
   }
-  z --
+  z--
 }
